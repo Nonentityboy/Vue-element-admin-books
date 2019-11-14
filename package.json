@@ -1,0 +1,24 @@
+{
+  "name": "vue-ssr--nuxt",
+  "version": "1.0.0",
+  "description": "学习Nuxt.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nonentityboy/Vue-SSR--Nuxt.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nonentityboy/Vue-SSR--Nuxt.js/issues"
+  },
+  "homepage": "https://github.com/Nonentityboy/Vue-SSR--Nuxt.js#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "vue": "^2.6.10",
+    "vue-server-renderer": "^2.6.10"
+  }
+}
