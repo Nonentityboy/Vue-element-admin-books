@@ -1,11 +1,11 @@
 # Vue-element-admin-books
 
-使用vue-element-admin模板改造的`悦读书`后台管理系统。
+使用vue-element-admin为基础开发的`前端读书管理系统`。
 
 
 
 ## 项目结构
-### api：接口请求
+* api：接口请求
 * assets：静态资源
 * components：通用组件
 * directive：自定义指令
