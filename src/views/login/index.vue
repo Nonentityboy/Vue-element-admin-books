@@ -117,9 +117,18 @@ export default {
     }
   },
   methods: {
-    checkCapslock(e) {
-      const { key } = e
-      this.capsTooltip = key && key.length === 1 && (key >= 'A' && key <= 'Z')
+    checkCapslock({ shiftKey, key } = {}) {
+      // 控制提示大小写
+      if (key && key.length === 1) {
+        if (shiftKey && (key >= 'a' && key <= 'z') || !shiftKey && (key >= 'A' && key <= 'Z')) {
+          this.capsTooltip = true
+        } else {
+          this.capsTooltip = false
+        }
+      }
+      if (key === 'CapsLock' && this.capsTooltip === true) {
+        this.capsTooltip = false
+      }
     },
     showPwd() {
       if (this.passwordType === 'password') {
