@@ -133,16 +133,36 @@ export const asyncRoutes = [
   {
     path: '/book',
     component: Layout,
-    redirect: '/book/create',
+    redirect: '/book/list',
+    name: 'Book',
+    meta: {
+      title: '图书管理',
+      icon: 'documentation'
+    },
     children: [
       {
-        path: '/book/create',
+        path: 'list',
+        component: () => import('@/views/book/list'),
+        name: 'BookList',
+        meta: { title: '图书列表', icon: 'list', noCache: true }
+      },
+      {
+        path: 'create',
         component: () => import('@/views/book/create'),
-        name: 'book',
-        meta: { title: '添加图书', icon: 'edit', roles: ['admin'] }
+        name: 'CreateBook',
+        meta: { title: '添加图书', icon: 'edit', noCache: true }
+      },
+      {
+        path: 'edit/:fileName(\\w+)',
+        component: () => import('@/views/book/edit'),
+        name: 'EditBook',
+        meta: { title: '编辑图书', noCache: true, activeMenu: '/book/list' },
+        hidden: true
       }
     ]
-  }
+  },
+  // 404 page must be placed at the end !!!
+  { path: '*', redirect: '/404', hidden: true }
 ]
 // export const asyncRoutes = [
 //   {

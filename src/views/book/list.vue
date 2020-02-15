@@ -6,7 +6,7 @@
 import Detail from './components/Detail'
 
 export default {
-  name: 'CreateBook',
+  name: 'BookList',
   components: { Detail }
 }
 </script>
