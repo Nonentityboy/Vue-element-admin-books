@@ -3,7 +3,7 @@
 使用vue-element-admin为基础开发的`前端读书管理系统`。
 
 
-
+将vue-element-admin部分内容删掉后。
 ## 项目结构
 * api：接口请求
 * assets：静态资源
@@ -25,3 +25,10 @@
 * settings.js：全局配置
 * main.js：全局入口文件
 * App.vue：全局入口组件
+
+
+## 登录流程如下
+![image](https://www.youbaobao.xyz/admin-docs/assets/img/login_process.58cab9a5.png)
+
+### 路由和权限校验
+![](https://www.youbaobao.xyz/admin-docs/assets/img/router_process.9acaa55e.png)
