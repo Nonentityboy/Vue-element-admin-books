@@ -1,12 +1,12 @@
 <template>
   <div class="detail">
     <el-form ref="postForm" :model="postForm" :rules="rules" class="form-container">
-      <sticky :z-index="10" :class-name="'sub-navbar ' + postForm.status">
+      <Sticky :z-index="10" :class-name="'sub-navbar ' + postForm.status">
         <el-button v-if="!isEdit" @click.prevent.stop="showGuide">显示帮助</el-button>
         <el-button v-loading="loading" style="margin-left: 10px;" type="success" @click="submitForm">
           {{ isEdit ? '编辑电子书' : '新增电子书' }}
         </el-button>
-      </sticky>
+      </Sticky>
       <div class="detail-container">
         <el-row>
           <Warning />
@@ -19,7 +19,10 @@
 </template>
 
 <script>
+import Sticky from '../../../components/Sticky/index'
+
 export default {
+  components: { Sticky },
   props: {
     isEdit: Boolean
   }
