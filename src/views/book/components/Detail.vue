@@ -10,7 +10,9 @@
       <div class="detail-container">
         <el-row>
           <Warning />
-          <el-col :span="24" />
+          <el-col :span="24">
+            <EbookUpload />
+          </el-col>
           <el-col :span="24" />
         </el-row>
       </div>
@@ -21,9 +23,10 @@
 <script>
 import Sticky from '../../../components/Sticky/index'
 import Warning from './Warning'
+import EbookUpload from '../../../components/EbookUpload'
 
 export default {
-  components: { Sticky, Warning },
+  components: { Sticky, Warning, EbookUpload },
   props: {
     isEdit: Boolean
   },
@@ -31,6 +34,7 @@ export default {
     return {
       loading: false,
       postForm: {
+        status: 1
       }
     }
   },
