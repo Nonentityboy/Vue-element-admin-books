@@ -20,11 +20,30 @@
 
 <script>
 import Sticky from '../../../components/Sticky/index'
+import Warning from './Warning'
 
 export default {
-  components: { Sticky },
+  components: { Sticky, Warning },
   props: {
     isEdit: Boolean
+  },
+  data() {
+    return {
+      loading: false,
+      postForm: {
+      }
+    }
+  },
+  methods: {
+    submitForm() {
+      this.loading = true
+      setTimeout(() => {
+        this.loading = false
+      }, 1000)
+    },
+    showGuide() {
+      console.log('showGuide')
+    }
   }
 }
 </script>
